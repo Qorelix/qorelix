@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | Qorelix</title>
+  <meta name="description" content="Page not found. The requested page does not exist or has been moved.">
+  <meta name="robots" content="noindex, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="404 — Page Not Found | Qorelix">
+  <meta property="og:description" content="Page not found.">
+  <link rel="icon" type="image/png" href="../assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <style>
+    .page-404 { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem; position: relative; overflow: hidden; }
+    .page-404-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(230, 0, 0, 0.06) 0%, transparent 60%); pointer-events: none; }
+    .error-code { font-size: clamp(8rem, 20vw, 16rem); font-weight: 800; color: #E60000; line-height: 1; margin-bottom: 1.5rem; text-shadow: 0 0 60px rgba(230, 0, 0, 0.3); }
+    .error-title { font-size: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+    .error-text { font-size: 1.125rem; color: #999; max-width: 500px; margin: 0 auto 2rem; line-height: 1.625; }
+  </style>
+</head>
+<body>
+  <div class="page-404">
+    <div class="page-404-bg"></div>
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="error-code">404</div>
+      <h1 class="error-title">Page Not Found</h1>
+      <p class="error-text">The page you are looking for doesn't exist or has been moved. Let's get you back on track.</p>
+      <div class="hero-actions" style="justify-content: center;">
+        <a href="../index.html" class="btn btn-primary btn-lg">
+          <i class="fas fa-home"></i> Back to Home
+        </a>
+        <a href="contact.html" class="btn btn-secondary btn-lg">
+          Contact Us <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script>
+    gsap.from('.error-code', { opacity: 0, y: -50, duration: 1, ease: 'power4.out' });
+    gsap.from('.error-title', { opacity: 0, y: 30, duration: 0.8, delay: 0.3, ease: 'power3.out' });
+    gsap.from('.error-text', { opacity: 0, y: 20, duration: 0.6, delay: 0.5, ease: 'power3.out' });
+    gsap.from('.btn', { opacity: 0, y: 20, duration: 0.6, delay: 0.7, stagger: 0.15, ease: 'back.out(1.7)' });
+  </script>
+</body>
+</html>

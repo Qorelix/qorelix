@@ -1,0 +1,474 @@
+/* ========================================
+   QORELIX — Responsive Stylesheet
+   ======================================== */
+
+/* --- Desktop Large (1440px+) --- */
+@media (max-width: 1440px) {
+  .industries-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --- Desktop (1200px) --- */
+@media (max-width: 1200px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Laptop (1024px) --- */
+@media (max-width: 1024px) {
+  :root {
+    --gutter: 1.5rem;
+    --space-5xl: 6rem;
+    --space-4xl: 4rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+  }
+
+  .page-header-title {
+    font-size: var(--font-size-5xl);
+  }
+
+  .product-name {
+    font-size: var(--font-size-5xl);
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .awards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-features {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+}
+
+/* --- Tablet (768px) --- */
+@media (max-width: 768px) {
+  :root {
+    --gutter: 1.25rem;
+    --nav-height: 64px;
+    --space-5xl: 4rem;
+    --space-4xl: 3rem;
+    --space-3xl: 2.5rem;
+  }
+
+  .section-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .section-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  /* Navigation */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-2xl);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: calc(var(--z-sticky) - 1);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links a {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+  }
+
+  .nav-links .nav-cta {
+    font-size: var(--font-size-base);
+    padding: 0.75rem 2rem;
+    margin-top: var(--space-md);
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav.scrolled {
+    height: var(--nav-height-scrolled);
+  }
+
+  /* Grids */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .about-story {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .contact-info-list {
+    order: 2;
+  }
+
+  .contact-form-wrap {
+    order: 1;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hero */
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .hero-content {
+    padding: var(--space-4xl) 0;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Footer */
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .footer-legal {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-newsletter-input {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  /* Page Header */
+  .page-header {
+    padding: calc(var(--nav-height) + var(--space-4xl)) 0 var(--space-3xl);
+  }
+
+  .page-header-title {
+    font-size: var(--font-size-4xl);
+  }
+
+  .page-header-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  /* Product */
+  .product-showcase {
+    padding: var(--space-2xl);
+  }
+
+  .product-name {
+    font-size: var(--font-size-4xl);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  /* Timeline */
+  .timeline {
+    padding-left: var(--space-2xl);
+  }
+
+  .timeline-number {
+    left: calc(-1 * var(--space-2xl) - 16px);
+    width: 30px;
+    height: 30px;
+    font-size: var(--font-size-xs);
+  }
+
+  /* Error */
+  .error-code {
+    font-size: clamp(5rem, 20vw, 10rem);
+  }
+
+  .error-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .error-text {
+    font-size: var(--font-size-base);
+  }
+
+  /* Mouse follower */
+  .mouse-follower,
+  .mouse-follower-dot {
+    display: none;
+  }
+
+  /* Section spacing */
+  .section {
+    padding: var(--space-4xl) 0;
+  }
+}
+
+/* --- Mobile (480px) --- */
+@media (max-width: 480px) {
+  :root {
+    --gutter: 1rem;
+    --space-xl: 1.5rem;
+    --space-2xl: 2rem;
+  }
+
+  .section-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 10vw, 2.25rem);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .page-header-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .page-header-subtitle {
+    font-size: var(--font-size-sm);
+  }
+
+  .stat-number {
+    font-size: var(--font-size-3xl);
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+
+  .industry-card {
+    padding: var(--space-lg);
+  }
+
+  .industry-icon {
+    font-size: var(--font-size-2xl);
+  }
+
+  .product-name {
+    font-size: var(--font-size-3xl);
+  }
+
+  .testimonial-card {
+    padding: var(--space-lg);
+  }
+
+  .card {
+    padding: var(--space-lg);
+  }
+
+  .service-card {
+    padding: var(--space-lg);
+  }
+
+  .filter-bar {
+    gap: var(--space-xs);
+  }
+
+  .filter-btn {
+    font-size: var(--font-size-xs);
+    padding: 0.375rem 1rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: var(--font-size-sm);
+  }
+
+  .btn-lg {
+    padding: 1rem 2rem;
+  }
+
+  .cta-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero-tag {
+    font-size: 10px;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .tech-item {
+    font-size: var(--font-size-xs);
+    padding: 0.5rem 1rem;
+  }
+
+  .blog-search {
+    max-width: 100%;
+  }
+
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .nav-links a {
+    font-size: var(--font-size-xl);
+  }
+
+  .hero-tag {
+    padding: 0.375rem 0.75rem;
+    gap: var(--space-xs);
+  }
+}
+
+/* --- Small Mobile (360px) --- */
+@media (max-width: 360px) {
+  .industries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: clamp(1.5rem, 10vw, 1.75rem);
+  }
+}
+
+/* --- Print --- */
+@media print {
+  .nav,
+  .footer,
+  .mouse-follower,
+  .scroll-progress,
+  .loader,
+  .hero-scroll-indicator {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .section {
+    padding: 2rem 0;
+    page-break-inside: avoid;
+  }
+}
